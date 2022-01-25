@@ -17,7 +17,6 @@ module.exports.findOneJoke = (req, res) => {
 };
 
 module.exports.createNewJoke = (req, res) => {
-    console.log('body is', req.body);
     Joke.create(req.body)
         .then(newlyCreatedJoke => {
             res.json({ results: newlyCreatedJoke });
